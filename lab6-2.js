@@ -13,6 +13,8 @@ function pageReady() {
 	var mysteryBoxElement = document.getElementById("mysteryBox");
 	var buttonBoxElement = document.getElementById("buttonBox");
 
+	console.log(buttonBoxElement.closest('h2'));
+
 	//====CREATE THE FUNCTIONS WE'LL NEED====
 	mysteryBoxElement.onmouseover = createPopup;
 	//FUNCTION TO ASK USER
@@ -33,10 +35,15 @@ function pageReady() {
 		buttonBoxElement.style.backgroundColor = "orange";
 		buttonBoxElement.style.cursor = "";
 
+		// Method 1
 		buttonBoxElement.innerHTML = "<h2>SURPRISE!!</h2>";
 
+		// Method 2
 		// var h2Element = buttonBoxElement.getElementsByTagName("h2")[0];
 		// h2Element.innerText = "SURPRISE!!";
+
+		// Method 3
+		console.log(buttonBoxElement.closest('h2'));
 	}
 
 	//SETUP LISTENERS
